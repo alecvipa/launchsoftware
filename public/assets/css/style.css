@@ -1,0 +1,52 @@
+.inicioDiv{
+    background-color: #1C0C3C;
+}
+.fonts{
+    font-family: 'Heebo', sans-serif;
+}
+.imgLogoM{
+    width: 30%;
+}
+.sTitles{
+    margin-top: 5%;
+}
+.blink {
+    animation: blinker 1.5s linear infinite;
+  }
+  @keyframes blinker {
+    50% {
+      opacity: 0.5;
+    }
+}
+.blink2 {
+    animation: blinker 1.5s linear infinite;
+  }
+  @keyframes blinker {
+    50% {
+      opacity: 0.5;
+    }
+}
+.escribenosDiv{
+    margin-top: 3%;
+}
+.elementsEscribenos{
+    color: #716686;
+}
+.bolders{
+    font-weight: bolder;
+}
+.navBar{
+    margin-bottom: 2%;
+}
+.navBarElement:hover {
+    color: #9484A4;
+}
+.pointer {cursor: pointer;}
+@media(max-width:991px){
+    .imgLogoM{
+        width: 70%;
+    }
+    .navBar{
+        font-size: 12px;
+    }
+}

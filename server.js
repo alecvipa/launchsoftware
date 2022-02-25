@@ -3,10 +3,6 @@ require('dotenv').config();
 // Dependencies
 var express = require("express");
 var exphbs = require("express-handlebars");
-const nodemailer = require("nodemailer");
-const email = process.env.email;
-const superSecretPwd = process.env.superSecretPwd;
-const tokenFb = process.env.tokenAccesoFB
 
 // Create an instance of the express app.
 var app = express();
@@ -24,60 +20,15 @@ var PORT = process.env.PORT || 3000;
 app.engine("handlebars", exphbs.engine({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-// Redirect to https://xyncs.com
-// const targetBaseUrl = 'http://www.yukimportaciones.com/inicio';
-
 
 
 // Routes
 app.get('/', function (req, res) {
-    // res.redirect(targetBaseUrl);
-    res.render('inicio');
-
-});
-app.get('/inicio', function (req, res) {
-    res.render('inicio');
-
-});
-app.get('/privacidad', function (req, res) {
-    res.render('privacidad');
-
-});
-
-
-
-// Nodemailer route
-
-app.post("/ajax/email", function (request, response) {
-    console.log(email);
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        secure: false,
-        port: 25,
-        auth: {
-            user: email,
-            pass: superSecretPwd
-        },
-        tls: {
-            rejectUnauthorized: false
-        }
-    });
-
-    
-    var htmlBody = `<h2>Contacto</h2><p>Nombre: ${request.body.name} </p><p> Correo electrónico: <a href='mailto: ${request.body.email}'>${request.body.email}</a></p><p>Número de contacto:${request.body.number} </p>`;
-    var mail = {
-        from: '"Team: Xyncs Web Studio',
-        to: 'hebrit_626@hotmail.com',
-        subject: '¡Alguien ha dejado sus datos en Grupo Loig!',
-        html: htmlBody
-    };
-    transporter.sendMail(mail, function (err, info) {
-        if (err) {
-            return console.log(err);
-        } else {
-            console.log("message sent!");
-        };
-    });
+    res.render('inicio')
+})
+app.get('/:params?', function (req, res) {
+    var params = req.params.params;
+    res.render(params);
 });
 
 

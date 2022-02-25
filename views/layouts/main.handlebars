@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="facebook-domain-verification" content="2dtfi3kofxydcglrs1ukucybyaxvii" />
+    <meta name="description"
+        content="Somos una empresa integrada por un equipo de personas apasionadas en la tecnología de la información. Damos soluciones de TI para potencializar las operaciones de su negocio y aumentar la calidad de sus procesos y servicios. Nuestra manera de operar incluye un análisis profundo del negocio para así solucionar de la mejor manera los problemas y mejorar los procesos de forma óptima.">
+
+    <meta name="keywords"
+        content="Evento corporativo, Evento empresarial, Evento social, Eventos grupales, Evento social empresarial">
+    <title>Launch Software</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+     <script src="https://kit.fontawesome.com/28f081bff3.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link rel="shortcut icon" href="assets/images/coktail.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter&family=Josefin+Sans:ital,wght@1,600&family=Nunito+Sans:wght@200&family=Open+Sans&family=Work+Sans:wght@300&display=swap"
+        rel="stylesheet">
+    <script>
+        function submitEmailForm(form) {
+            var obj = new XMLHttpRequest();
+            obj.onreadystatechange = function () {
+                if (obj.readyState == 4) {
+                    if (obj.status == 200) {
+                        var res = JSON.parse(obj.responseText);
+                        alert(res.message);
+                    }
+                    else {
+                        console.log("XMLHttp status " + obj.status + ": " + obj.statusText);
+                    }
+                }
+            };
+            obj.open("post", form.action, true);
+            obj.setRequestHeader("Content-Type", "application/json"); // NOTICE: "application/json"
+            obj.send(JSON.stringify({ name: form.name.value, email: form.email.value, number: form.number.value }));
+            alert("¡En breve te contactaremos!");
+            $(".formInput").val(" ");
+            return false;
+        }
+    </script>
+</head>
+
+<body class="fonts boldSete" data-spy="scroll" data-target="#lashistaItemLandingPage" data-offset="0">
+    <div>
+        {{!-- Header ends --}}
+        <div class="bodyPrincipal">
+            {{{body}}}
+        </div>
+        {{!-- FOOTER STARTS --}}
+        {{!-- <div id="footer-wrap" class="is-clearfix paraFont"
+            style="border-top: 1px solid #f3f3f3; padding: 60px 0 60px; background-color: white">
+            <footer id="footer" class="site-footer">
+                <div id="footer-inner" class="site-footer-inner container">
+                    <div class="row text-center">
+                        <div class="col-md-8" style="display: flex; flex-wrap: wrap">
+                            <div class="align-logo-footer" style="display: inline-block">
+                                <a href="/">
+                                    <img src="assets/images/logoZincel2.png"
+                                        style="width: 243px; height: auto; margin-top: 0%" alt="" class="imgLogoFooter">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 right-footer">
+                            <br>
+
+
+                            <p><b><span style="color: #5d5c5c;">Zincel Materiales S. de R.L de C.V.</span></b> Todos los
+                                derechos reservados. Sus
+                                datos están protegidos por
+                                la ley de privacidad. <span><a href="/privacidad" style="color: #5d5c5c;">Visita nuestra
+                                        política de privacidad</a></span></p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </footer> --}}
+            <!-- #footer -->
+            {{!--
+        </div> --}}
+
+        <script src="/assets/js/script.js"></script>
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
