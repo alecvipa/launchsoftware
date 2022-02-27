@@ -41,12 +41,37 @@
 .navBarElement:hover {
     color: #9484A4;
 }
+.oberlayMision{
+    height: 100%;
+    width: 100%;
+    background-color: #1c0c3c7a;
+    padding-top: 3%;
+}
+.misionDiv{ 
+    height: 15rem;
+    background-image: url("/assets/images/cubo2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 5%;
+    
+}
 .pointer {cursor: pointer;}
+
 @media(max-width:991px){
     .imgLogoM{
         width: 70%;
     }
     .navBar{
         font-size: 12px;
+    }
+    .misionDiv{
+        height: 27rem;
+    }
+    .objetivoTitle{
+        margin-top: 3%;
+    }
+    .oberlayMision{
+        padding-top: 8%;
     }
 }
