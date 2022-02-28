@@ -61,6 +61,14 @@
 .serviciosLaunchDiv{
     margin-top: 5%;
 }
+.launchPriv{
+    padding-top: 5%;
+}
+.contacto{
+    background-color: #D0CDD7;
+    padding: 5%;
+    margin-top: 5%;
+}
 
 
 @media(max-width:991px){

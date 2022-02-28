@@ -167,6 +167,64 @@
         </div>
     </div>
 </div>
-<div class="contactoDiv" id="contacto">
-    <img src="..." class="img-fluid" alt="Responsive image">
+<div class="contacto" id="contacto">
+    <h4>
+        Contáctanos
+    </h4>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="contactoForm">
+                <form action="/ajax/email" method="POST" onsubmit="return submitEmailForm(this);" id="myForm">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nombre</label>
+                        <input name="name" type="text" class="form-control formInput" id="exampleInputEmail1"
+                            aria-describedby="emailHelp" placeholder="Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Correo electrónico</label>
+                        <input name="email" type="text" class="form-control formInput" id="exampleInputEmail1"
+                            aria-describedby="emailHelp" placeholder="Correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Número celular</label>
+                        <input name="number" type="text" class="form-control formInput" id="exampleInputPassword1"
+                            placeholder="Número celular" required>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input formInput" id="exampleCheck1" required>
+                        <label class="form-check-label" for="exampleCheck1">Acepto política de
+                            privacidad</label>
+                    </div> <br>
+                    <button type="submit" class="btn btn-dark">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="inicioDiv">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="/assets/images/logoMorado.png" class="img-fluid blink imgLogoM" alt="Responsive image">
+                <div class="row text-white">
+                    <div class="col-md-12 navBar">
+                        <span class="navBarElement pointer" onclick="location.href='/';">INICIO</span> || <span
+                            class="navBarElement pointer" onclick="location.href='#servicios';">SERVICIOS</span> ||
+                        <span class="navBarElement pointer" onclick="location.href='/privacidad';">POLÍTICA DE
+                            PRIVACIDAD</span>
+                        || <span class="navBarElement pointer" onclick="location.href='#contacto';">CONTACTO</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 text-white launchPriv">
+                <p><b><span style="color: #9484A4;">© LAUNCH SOFTWARE S.A DE C.V.</span></b> Todos los
+                    derechos reservados. Sus
+                    datos están protegidos por
+                    la ley de privacidad. <button type="button" class="btn btn-link" style="color: whitesmoke;">Política
+                        de
+                        privacidad</button></p>
+            </div>
+        </div>
+    </div>
 </div>
