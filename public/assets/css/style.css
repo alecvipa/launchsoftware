@@ -58,7 +58,18 @@
 }
 .pointer {cursor: pointer;}
 
+.serviciosLaunchDiv{
+    margin-top: 5%;
+}
+
+
 @media(max-width:991px){
+    .card{
+        margin-left: 7%;
+    }
+    .cardResp{
+        margin-top: 10%;
+    }
     .imgLogoM{
         width: 70%;
     }
