@@ -75,7 +75,10 @@
 .jumbotron{
     padding: 1rem 2rem !important;
 }
-
+.divNa{
+    background-color: #9484A4;
+    padding-top: 1%;
+}
 
 @media(max-width:991px){
     .navbar{
