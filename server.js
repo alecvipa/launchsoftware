@@ -23,12 +23,16 @@ var PORT = process.env.PORT || 3000;
 app.engine("handlebars", exphbs.engine({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+// Redirect to https://xyncs.com
+const targetBaseUrl = 'https://www.launchsoftware.com.mx/inicio';
+
 
 
 // Routes
 app.get('/', function (req, res) {
-    res.render('inicio')
-})
+    res.redirect(targetBaseUrl);
+    // res.render('inicio');
+});
 app.get('/:params?', function (req, res) {
     var params = req.params.params;
     res.render(params);
