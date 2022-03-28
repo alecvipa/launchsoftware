@@ -55,7 +55,7 @@ app.post("/ajax/email", function (request, response) {
     var htmlBody = `<h2>Contacto</h2><p>Nombre: ${request.body.name} </p><p> Correo electrónico: <a href='mailto: ${request.body.email}'>${request.body.email}</a></p><p>Número de contacto:${request.body.number} </p>`;
     var mail = {
         from: '"Team: Xyncs Web Studio',
-        to: 'hebrit_626@hotmail.com',
+        to: 'clientes@launchsoftware.com.mx',
         subject: '¡Alguien ha dejado sus datos en Launch Software!',
         html: htmlBody
     };
